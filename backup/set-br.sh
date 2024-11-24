@@ -9,7 +9,7 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 apt install rclone -y
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://dpvpn.me/sc/backup/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://dpvpn.me/backup/rclone.conf"
 cd /bin
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
@@ -34,11 +34,11 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://dpvpn.me/sc/backup/autobackup.sh"
-wget -O backup "https://dpvpn.me/sc/backup/backup.sh"
-wget -O restore "https://dpvpn.me/sc/backup/restore.sh"
-wget -O strt "https://dpvpn.me/sc/backup/strt.sh"
-wget -O limitspeed "https://dpvpn.me/sc/backup/limitspeed.sh"
+wget -O autobackup "https://dpvpn.me/backup/autobackup.sh"
+wget -O backup "https://dpvpn.me/backup/backup.sh"
+wget -O restore "https://dpvpn.me/backup/restore.sh"
+wget -O strt "https://dpvpn.me/backup/strt.sh"
+wget -O limitspeed "https://dpvpn.me/backup/limitspeed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x restore
