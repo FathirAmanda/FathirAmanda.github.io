@@ -13,7 +13,7 @@ yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 # domain random
-CDN="https://dpvpn.me/sc/ssh"
+CDN="https://dpvpn.me/ssh"
 cd /root
 if [ "${EUID}" -ne 0 ]; then
 echo "You need to run this script as root"
@@ -125,7 +125,7 @@ echo -ne "[ ${green}INFO${NC} ] Check permission : "
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 echo ""
-wget -q https://dpvpn.me/sc/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://dpvpn.me/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 echo " "
@@ -166,7 +166,7 @@ fi
 # Inisialisasi
 MYIP=$(curl -sS ipv4.icanhazip.com)
 # Perizinan Sc & Pemanggilan username
-izinsc="https://dpvpn.me/sc/register"
+izinsc="https://dpvpn.me/register"
 rm -f /usr/bin/user
 username=$(curl $izinsc | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
@@ -214,14 +214,14 @@ echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://dpvpn.me/sc/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://dpvpn.me/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install BACKUP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://dpvpn.me/sc/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+wget https://dpvpn.me/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -229,15 +229,15 @@ echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://dpvpn.me/sc/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://dpvpn.me/sc/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://dpvpn.me/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://dpvpn.me/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install SLOWDNS              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q -O slow.sh https://dpvpn.me/sc/slow.sh && chmod +x slow.sh && ./slow.sh
+wget -q -O slow.sh https://dpvpn.me/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
 cat> /root/.profile << END
 if [ "$BASH" ]; then
@@ -260,7 +260,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://dpvpn.me/sc/version )
+serverV=$( curl -sS https://dpvpn.me/version )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
