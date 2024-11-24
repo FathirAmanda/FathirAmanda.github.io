@@ -11,7 +11,7 @@ organization=none
 organizationalunit=none
 commonname=none
 email=andyyuda51@gmail.com
-curl -sS https://dpvpn.me/sc/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://dpvpn.me/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 cd
 cat > /etc/systemd/system/rc-local.service <<-END
@@ -84,11 +84,11 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://dpvpn.me/sc/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://dpvpn.me/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 cd
-wget -O /usr/bin/badvpn-udpgw "https://dpvpn.me/sc/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://dpvpn.me/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -175,11 +175,11 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://dpvpn.me/sc/issue.net"
+wget -q -O /etc/issue.net "https://dpvpn.me/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
-wget https://dpvpn.me/sc/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://dpvpn.me/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
 iptables -A FORWARD -m string --string "announce_peer" --algo bm -j DROP
 iptables -A FORWARD -m string --string "find_node" --algo bm -j DROP
@@ -196,69 +196,69 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 cd /usr/bin
-wget -O menu "https://dpvpn.me/sc/menu/menu.sh"
-wget -O menu-trial "https://dpvpn.me/sc/menu/menu-trial.sh"
-wget -O menu-vmess "https://dpvpn.me/sc/menu/menu-vmess.sh"
-wget -O menu-vless "https://dpvpn.me/sc/menu/menu-vless.sh"
-wget -O running "https://dpvpn.me/sc/menu/running.sh"
-wget -O clearcache "https://dpvpn.me/sc/menu/clearcache.sh"
-wget -O menu-trgo "https://dpvpn.me/sc/menu/menu-trgo.sh"
-wget -O menu-trojan "https://dpvpn.me/sc/menu/menu-trojan.sh"
-wget -O menu-ssh "https://dpvpn.me/sc/menu/menu-ssh.sh"
-wget -O usernew "https://dpvpn.me/sc/ssh/usernew.sh"
-wget -O trial "https://dpvpn.me/sc/ssh/trial.sh"
-wget -O renew "https://dpvpn.me/sc/ssh/renew.sh"
-wget -O hapus "https://dpvpn.me/sc/ssh/hapus.sh"
-wget -O cek "https://dpvpn.me/sc/ssh/cek.sh"
-wget -O member "https://dpvpn.me/sc/ssh/member.sh"
-wget -O delete "https://dpvpn.me/sc/ssh/delete.sh"
-wget -O autokill "https://dpvpn.me/sc/ssh/autokill.sh"
-wget -O ceklim "https://dpvpn.me/sc/ssh/ceklim.sh"
-wget -O tendang "https://dpvpn.me/sc/ssh/tendang.sh"
-wget -O xp "https://dpvpn.me/sc/ssh/xp.sh"
-wget -O menu-set "https://dpvpn.me/sc/menu/menu-set.sh"
-wget -O menu-domain "https://dpvpn.me/sc/menu/menu-domain.sh"
-wget -O add-host "https://dpvpn.me/sc/ssh/add-host.sh"
-wget -O port-change "https://dpvpn.me/sc/port/port-change.sh"
-wget -O certv2ray "https://dpvpn.me/sc/xray/certv2ray.sh"
-wget -O menu-webmin "https://dpvpn.me/sc/menu/menu-webmin.sh"
-wget -O speedtest "https://dpvpn.me/sc/ssh/speedtest_cli.py"
-wget -O about "https://dpvpn.me/sc/menu/about.sh"
-wget -O auto-reboot "https://dpvpn.me/sc/menu/auto-reboot.sh"
-wget -O restart "https://dpvpn.me/sc/menu/restart.sh"
-wget -O bw "https://dpvpn.me/sc/menu/bw.sh"
-wget -O menu-theme "https://dpvpn.me/sc/theme/menu-theme.sh"
-wget -O menu1 "https://dpvpn.me/sc/theme/menu1.sh"
-wget -O menu2 "https://dpvpn.me/sc/theme/menu2.sh"
-wget -O menu3 "https://dpvpn.me/sc/theme/menu3.sh"
-wget -O menu4 "https://dpvpn.me/sc/theme/menu4.sh"
-wget -O menu5 "https://dpvpn.me/sc/theme/menu5.sh"
-wget -O port-ssl "https://dpvpn.me/sc/port/port-ssl.sh"
-wget -O port-ovpn "https://dpvpn.me/sc/port/port-ovpn.sh"
-wget -O acs-set "https://dpvpn.me/sc/acs-set.sh"
-wget -O status "https://dpvpn.me/sc/status.sh"
-wget -O sshws "https://dpvpn.me/sc/sshws/sshws.sh"
-wget -O status "https://dpvpn.me/sc/status.sh"
-wget -O menu-backup "https://dpvpn.me/sc/menu/menu-backup.sh"
-wget -O backup "https://dpvpn.me/sc/backup/backup.sh"
-wget -O restore "https://dpvpn.me/sc/backup/restore.sh"
-wget -O jam "https://dpvpn.me/sc/jam.sh"
-wget -q -O /usr/bin/xolpanel "https://dpvpn.me/sc/xolpanel/xolpanel.sh"
-wget -q -O /usr/bin/lock "https://dpvpn.me/sc/user-lock.sh"
-wget -q -O /usr/bin/unlock "https://dpvpn.me/sc/user-unlock.sh"
-wget -q -O /usr/bin/update "https://dpvpn.me/sc/update.sh"
-wget -q -O /usr/bin/bot2 "https://dpvpn.me/sc/bot/bot2.sh"
-wget -q -O /usr/bin/add-bot "https://dpvpn.me/sc/bot/add-bot.sh"
-wget -q -O /usr/bin/add-bot-bersama "https://dpvpn.me/sc/bot/add-bot-bersama.sh"
-wget -q -O /usr/bin/bot-bansos "https://dpvpn.me/sc/bot/bot-bansos.sh"
-wget -q -O /usr/bin/stop-bot "https://dpvpn.me/sc/bot/stop-bot.sh"
-wget -q -O /usr/bin/stop-bot2 "https://dpvpn.me/sc/bot/stop-bot2.sh"
-wget -q -O /usr/bin/restart-bot "https://dpvpn.me/sc/bot/restart-bot.sh"
-wget -q -O /usr/bin/restart-bot2 "https://dpvpn.me/sc/bot/restart-bot2.sh"
-wget -q -O /usr/bin/hapus-bot "https://dpvpn.me/sc/bot/hapus-bot.sh"
-wget -q -O /usr/bin/del-bot2 "https://dpvpn.me/sc/bot/del-bot2.sh"
-wget -q -O /usr/bin/update "https://dpvpn.me/sc/update.sh"
-wget -q -O /usr/bin/menu-bot "https://dpvpn.me/sc/menu/menu-bot.sh"
+wget -O menu "https://dpvpn.me/menu/menu.sh"
+wget -O menu-trial "https://dpvpn.me/menu/menu-trial.sh"
+wget -O menu-vmess "https://dpvpn.me/menu/menu-vmess.sh"
+wget -O menu-vless "https://dpvpn.me/menu/menu-vless.sh"
+wget -O running "https://dpvpn.me/menu/running.sh"
+wget -O clearcache "https://dpvpn.me/menu/clearcache.sh"
+wget -O menu-trgo "https://dpvpn.me/menu/menu-trgo.sh"
+wget -O menu-trojan "https://dpvpn.me/menu/menu-trojan.sh"
+wget -O menu-ssh "https://dpvpn.me/menu/menu-ssh.sh"
+wget -O usernew "https://dpvpn.me/ssh/usernew.sh"
+wget -O trial "https://dpvpn.me/ssh/trial.sh"
+wget -O renew "https://dpvpn.me/ssh/renew.sh"
+wget -O hapus "https://dpvpn.me/ssh/hapus.sh"
+wget -O cek "https://dpvpn.me/ssh/cek.sh"
+wget -O member "https://dpvpn.me/ssh/member.sh"
+wget -O delete "https://dpvpn.me/ssh/delete.sh"
+wget -O autokill "https://dpvpn.me/ssh/autokill.sh"
+wget -O ceklim "https://dpvpn.me/ssh/ceklim.sh"
+wget -O tendang "https://dpvpn.me/ssh/tendang.sh"
+wget -O xp "https://dpvpn.me/ssh/xp.sh"
+wget -O menu-set "https://dpvpn.me/menu/menu-set.sh"
+wget -O menu-domain "https://dpvpn.me/menu/menu-domain.sh"
+wget -O add-host "https://dpvpn.me/ssh/add-host.sh"
+wget -O port-change "https://dpvpn.me/port/port-change.sh"
+wget -O certv2ray "https://dpvpn.me/xray/certv2ray.sh"
+wget -O menu-webmin "https://dpvpn.me/menu/menu-webmin.sh"
+wget -O speedtest "https://dpvpn.me/ssh/speedtest_cli.py"
+wget -O about "https://dpvpn.me/menu/about.sh"
+wget -O auto-reboot "https://dpvpn.me/menu/auto-reboot.sh"
+wget -O restart "https://dpvpn.me/menu/restart.sh"
+wget -O bw "https://dpvpn.me/menu/bw.sh"
+wget -O menu-theme "https://dpvpn.me/theme/menu-theme.sh"
+wget -O menu1 "https://dpvpn.me/theme/menu1.sh"
+wget -O menu2 "https://dpvpn.me/theme/menu2.sh"
+wget -O menu3 "https://dpvpn.me/theme/menu3.sh"
+wget -O menu4 "https://dpvpn.me/theme/menu4.sh"
+wget -O menu5 "https://dpvpn.me/theme/menu5.sh"
+wget -O port-ssl "https://dpvpn.me/port/port-ssl.sh"
+wget -O port-ovpn "https://dpvpn.me/port/port-ovpn.sh"
+wget -O acs-set "https://dpvpn.me/acs-set.sh"
+wget -O status "https://dpvpn.me/status.sh"
+wget -O sshws "https://dpvpn.me/sshws/sshws.sh"
+wget -O status "https://dpvpn.me/status.sh"
+wget -O menu-backup "https://dpvpn.me/menu/menu-backup.sh"
+wget -O backup "https://dpvpn.me/backup/backup.sh"
+wget -O restore "https://dpvpn.me/backup/restore.sh"
+wget -O jam "https://dpvpn.me/jam.sh"
+wget -q -O /usr/bin/xolpanel "https://dpvpn.me/xolpanel/xolpanel.sh"
+wget -q -O /usr/bin/lock "https://dpvpn.me/user-lock.sh"
+wget -q -O /usr/bin/unlock "https://dpvpn.me/user-unlock.sh"
+wget -q -O /usr/bin/update "https://dpvpn.me/update.sh"
+wget -q -O /usr/bin/bot2 "https://dpvpn.me/bot/bot2.sh"
+wget -q -O /usr/bin/add-bot "https://dpvpn.me/bot/add-bot.sh"
+wget -q -O /usr/bin/add-bot-bersama "https://dpvpn.me/bot/add-bot-bersama.sh"
+wget -q -O /usr/bin/bot-bansos "https://dpvpn.me/bot/bot-bansos.sh"
+wget -q -O /usr/bin/stop-bot "https://dpvpn.me/bot/stop-bot.sh"
+wget -q -O /usr/bin/stop-bot2 "https://dpvpn.me/bot/stop-bot2.sh"
+wget -q -O /usr/bin/restart-bot "https://dpvpn.me/bot/restart-bot.sh"
+wget -q -O /usr/bin/restart-bot2 "https://dpvpn.me/bot/restart-bot2.sh"
+wget -q -O /usr/bin/hapus-bot "https://dpvpn.me/bot/hapus-bot.sh"
+wget -q -O /usr/bin/del-bot2 "https://dpvpn.me/bot/del-bot2.sh"
+wget -q -O /usr/bin/update "https://dpvpn.me/update.sh"
+wget -q -O /usr/bin/menu-bot "https://dpvpn.me/menu/menu-bot.sh"
 chmod +x xolpanel
 chmod +x menu
 chmod +x menu-trial
