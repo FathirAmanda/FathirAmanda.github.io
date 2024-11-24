@@ -605,32 +605,32 @@ systemctl restart trojan-go
 
 cd /usr/bin/
 # vmess
-wget -O add-ws "https://dpvpn.me/sc/xray/add-ws.sh" && chmod +x add-ws
-wget -O trialvmess "https://dpvpn.me/sc/xray/trialvmess.sh" && chmod +x trialvmess
-wget -O renew-ws "https://dpvpn.me/sc/xray/renew-ws.sh" && chmod +x renew-ws
-wget -O del-ws "https://dpvpn.me/sc/xray/del-ws.sh" && chmod +x del-ws
-wget -O cek-ws "https://dpvpn.me/sc/xray/cek-ws.sh" && chmod +x cek-ws
+wget -O add-ws "https://dpvpn.me/xray/add-ws.sh" && chmod +x add-ws
+wget -O trialvmess "https://dpvpn.me/xray/trialvmess.sh" && chmod +x trialvmess
+wget -O renew-ws "https://dpvpn.me/xray/renew-ws.sh" && chmod +x renew-ws
+wget -O del-ws "https://dpvpn.me/xray/del-ws.sh" && chmod +x del-ws
+wget -O cek-ws "https://dpvpn.me/xray/cek-ws.sh" && chmod +x cek-ws
 
 # vless
-wget -O add-vless "https://dpvpn.me/sc/xray/add-vless.sh" && chmod +x add-vless
-wget -O trialvless "https://dpvpn.me/sc/xray/trialvless.sh" && chmod +x trialvless
-wget -O renew-vless "https://dpvpn.me/sc/xray/renew-vless.sh" && chmod +x renew-vless
-wget -O del-vless "https://dpvpn.me/sc/xray/del-vless.sh" && chmod +x del-vless
-wget -O cek-vless "https://dpvpn.me/sc/xray/cek-vless.sh" && chmod +x cek-vless
+wget -O add-vless "https://dpvpn.me/xray/add-vless.sh" && chmod +x add-vless
+wget -O trialvless "https://dpvpn.me/xray/trialvless.sh" && chmod +x trialvless
+wget -O renew-vless "https://dpvpn.me/xray/renew-vless.sh" && chmod +x renew-vless
+wget -O del-vless "https://dpvpn.me/xray/del-vless.sh" && chmod +x del-vless
+wget -O cek-vless "https://dpvpn.me/xray/cek-vless.sh" && chmod +x cek-vless
 
 # trojan
-wget -O add-tr "https://dpvpn.me/sc/xray/add-tr.sh" && chmod +x add-tr
-wget -O trialtrojan "https://dpvpn.me/sc/xray/trialtrojan.sh" && chmod +x trialtrojan
-wget -O del-tr "https://dpvpn.me/sc/xray/del-tr.sh" && chmod +x del-tr
-wget -O renew-tr "https://dpvpn.me/sc/xray/renew-tr.sh" && chmod +x renew-tr
-wget -O cek-tr "https://dpvpn.me/sc/xray/cek-tr.sh" && chmod +x cek-tr
+wget -O add-tr "https://dpvpn.me/xray/add-tr.sh" && chmod +x add-tr
+wget -O trialtrojan "https://dpvpn.me/xray/trialtrojan.sh" && chmod +x trialtrojan
+wget -O del-tr "https://dpvpn.me/xray/del-tr.sh" && chmod +x del-tr
+wget -O renew-tr "https://dpvpn.me/xray/renew-tr.sh" && chmod +x renew-tr
+wget -O cek-tr "https://dpvpn.me/xray/cek-tr.sh" && chmod +x cek-tr
 
 # trojan go
-wget -O addtrgo "https://dpvpn.me/sc/xray/addtrgo.sh" && chmod +x addtrgo
-wget -O trialtrojango "https://dpvpn.me/sc/xray/trialtrojango.sh" && chmod +x trialtrojango
-wget -O deltrgo "https://dpvpn.me/sc/xray/deltrgo.sh" && chmod +x deltrgo
-wget -O renewtrgo "https://dpvpn.me/sc/xray/renewtrgo.sh" && chmod +x renewtrgo
-wget -O cektrgo "https://dpvpn.me/sc/xray/cektrgo.sh" && chmod +x cektrgo
+wget -O addtrgo "https://dpvpn.me/xray/addtrgo.sh" && chmod +x addtrgo
+wget -O trialtrojango "https://dpvpn.me/xray/trialtrojango.sh" && chmod +x trialtrojango
+wget -O deltrgo "https://dpvpn.me/xray/deltrgo.sh" && chmod +x deltrgo
+wget -O renewtrgo "https://dpvpn.me/xray/renewtrgo.sh" && chmod +x renewtrgo
+wget -O cektrgo "https://dpvpn.me/xray/cektrgo.sh" && chmod +x cektrgo
 
 
 sleep 1
