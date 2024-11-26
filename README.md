@@ -8,7 +8,7 @@ apt update -y && apt upgrade -y --fix-missing && apt install -y xxd bzip2 wget c
 
 ## Step 2
 ```
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://dpvpn.me/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget [https://dpvpn.me/setup.sh](https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/setup.sh) && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
 ## INSTALL UDP COSTUM
 masukan perintah ctrl + c enter
