@@ -11,7 +11,7 @@ organization=none
 organizationalunit=none
 commonname=none
 email=andyyuda51@gmail.com
-curl -sS https://dpvpn.me/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 cd
 cat > /etc/systemd/system/rc-local.service <<-END
@@ -84,11 +84,11 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://dpvpn.me/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 cd
-wget -O /usr/bin/badvpn-udpgw "https://dpvpn.me/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -148,38 +148,16 @@ cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 apt -y install fail2ban
-if [ -d '/usr/local/ddos' ]; then
-echo; echo; echo "Please un-install the previous version first"
-exit 0
-else
-mkdir /usr/local/ddos
-fi
-clear
-echo; echo 'Installing DOS-Deflate 0.6'; echo
-echo; echo -n 'Downloading source files...'
-wget -q -O /usr/local/ddos/ddos.conf http://www.inetbase.com/scripts/ddos/ddos.conf
-echo -n '.'
-wget -q -O /usr/local/ddos/LICENSE http://www.inetbase.com/scripts/ddos/LICENSE
-echo -n '.'
-wget -q -O /usr/local/ddos/ignore.ip.list http://www.inetbase.com/scripts/ddos/ignore.ip.list
-echo -n '.'
-wget -q -O /usr/local/ddos/ddos.sh http://www.inetbase.com/scripts/ddos/ddos.sh
-chmod 0755 /usr/local/ddos/ddos.sh
-cp -s /usr/local/ddos/ddos.sh /usr/local/sbin/ddos
-echo '...done'
-echo; echo -n 'Creating cron to run script every minute.....(Default setting)'
-/usr/local/ddos/ddos.sh --cron > /dev/null 2>&1
-echo '.....done'
 echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://dpvpn.me/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
-wget https://dpvpn.me/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
 iptables -A FORWARD -m string --string "announce_peer" --algo bm -j DROP
 iptables -A FORWARD -m string --string "find_node" --algo bm -j DROP
@@ -196,69 +174,69 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 cd /usr/bin
-wget -O menu "https://dpvpn.me/menu/menu.sh"
-wget -O menu-trial "https://dpvpn.me/menu/menu-trial.sh"
-wget -O menu-vmess "https://dpvpn.me/menu/menu-vmess.sh"
-wget -O menu-vless "https://dpvpn.me/menu/menu-vless.sh"
-wget -O running "https://dpvpn.me/menu/running.sh"
-wget -O clearcache "https://dpvpn.me/menu/clearcache.sh"
-wget -O menu-trgo "https://dpvpn.me/menu/menu-trgo.sh"
-wget -O menu-trojan "https://dpvpn.me/menu/menu-trojan.sh"
-wget -O menu-ssh "https://dpvpn.me/menu/menu-ssh.sh"
-wget -O usernew "https://dpvpn.me/ssh/usernew.sh"
-wget -O trial "https://dpvpn.me/ssh/trial.sh"
-wget -O renew "https://dpvpn.me/ssh/renew.sh"
-wget -O hapus "https://dpvpn.me/ssh/hapus.sh"
-wget -O cek "https://dpvpn.me/ssh/cek.sh"
-wget -O member "https://dpvpn.me/ssh/member.sh"
-wget -O delete "https://dpvpn.me/ssh/delete.sh"
-wget -O autokill "https://dpvpn.me/ssh/autokill.sh"
-wget -O ceklim "https://dpvpn.me/ssh/ceklim.sh"
-wget -O tendang "https://dpvpn.me/ssh/tendang.sh"
-wget -O xp "https://dpvpn.me/ssh/xp.sh"
-wget -O menu-set "https://dpvpn.me/menu/menu-set.sh"
-wget -O menu-domain "https://dpvpn.me/menu/menu-domain.sh"
-wget -O add-host "https://dpvpn.me/ssh/add-host.sh"
-wget -O port-change "https://dpvpn.me/port/port-change.sh"
-wget -O certv2ray "https://dpvpn.me/xray/certv2ray.sh"
-wget -O menu-webmin "https://dpvpn.me/menu/menu-webmin.sh"
-wget -O speedtest "https://dpvpn.me/ssh/speedtest_cli.py"
-wget -O about "https://dpvpn.me/menu/about.sh"
-wget -O auto-reboot "https://dpvpn.me/menu/auto-reboot.sh"
-wget -O restart "https://dpvpn.me/menu/restart.sh"
-wget -O bw "https://dpvpn.me/menu/bw.sh"
-wget -O menu-theme "https://dpvpn.me/theme/menu-theme.sh"
-wget -O menu1 "https://dpvpn.me/theme/menu1.sh"
-wget -O menu2 "https://dpvpn.me/theme/menu2.sh"
-wget -O menu3 "https://dpvpn.me/theme/menu3.sh"
-wget -O menu4 "https://dpvpn.me/theme/menu4.sh"
-wget -O menu5 "https://dpvpn.me/theme/menu5.sh"
-wget -O port-ssl "https://dpvpn.me/port/port-ssl.sh"
-wget -O port-ovpn "https://dpvpn.me/port/port-ovpn.sh"
-wget -O acs-set "https://dpvpn.me/acs-set.sh"
-wget -O status "https://dpvpn.me/status.sh"
-wget -O sshws "https://dpvpn.me/sshws/sshws.sh"
-wget -O status "https://dpvpn.me/status.sh"
-wget -O menu-backup "https://dpvpn.me/menu/menu-backup.sh"
-wget -O backup "https://dpvpn.me/backup/backup.sh"
-wget -O restore "https://dpvpn.me/backup/restore.sh"
-wget -O jam "https://dpvpn.me/jam.sh"
-wget -q -O /usr/bin/xolpanel "https://dpvpn.me/xolpanel/xolpanel.sh"
-wget -q -O /usr/bin/lock "https://dpvpn.me/user-lock.sh"
-wget -q -O /usr/bin/unlock "https://dpvpn.me/user-unlock.sh"
-wget -q -O /usr/bin/update "https://dpvpn.me/update.sh"
-wget -q -O /usr/bin/bot2 "https://dpvpn.me/bot/bot2.sh"
-wget -q -O /usr/bin/add-bot "https://dpvpn.me/bot/add-bot.sh"
-wget -q -O /usr/bin/add-bot-bersama "https://dpvpn.me/bot/add-bot-bersama.sh"
-wget -q -O /usr/bin/bot-bansos "https://dpvpn.me/bot/bot-bansos.sh"
-wget -q -O /usr/bin/stop-bot "https://dpvpn.me/bot/stop-bot.sh"
-wget -q -O /usr/bin/stop-bot2 "https://dpvpn.me/bot/stop-bot2.sh"
-wget -q -O /usr/bin/restart-bot "https://dpvpn.me/bot/restart-bot.sh"
-wget -q -O /usr/bin/restart-bot2 "https://dpvpn.me/bot/restart-bot2.sh"
-wget -q -O /usr/bin/hapus-bot "https://dpvpn.me/bot/hapus-bot.sh"
-wget -q -O /usr/bin/del-bot2 "https://dpvpn.me/bot/del-bot2.sh"
-wget -q -O /usr/bin/update "https://dpvpn.me/update.sh"
-wget -q -O /usr/bin/menu-bot "https://dpvpn.me/menu/menu-bot.sh"
+wget -O menu "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu.sh"
+wget -O menu-trial "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-trial.sh"
+wget -O menu-vmess "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-vmess.sh"
+wget -O menu-vless "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-vless.sh"
+wget -O running "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/running.sh"
+wget -O clearcache "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/clearcache.sh"
+wget -O menu-trgo "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-trgo.sh"
+wget -O menu-trojan "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-trojan.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-ssh.sh"
+wget -O usernew "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/trial.sh"
+wget -O renew "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/renew.sh"
+wget -O hapus "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/hapus.sh"
+wget -O cek "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/cek.sh"
+wget -O member "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/member.sh"
+wget -O delete "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/delete.sh"
+wget -O autokill "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/tendang.sh"
+wget -O xp "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/xp.sh"
+wget -O menu-set "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-set.sh"
+wget -O menu-domain "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-domain.sh"
+wget -O add-host "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/add-host.sh"
+wget -O port-change "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/port/port-change.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/xray/certv2ray.sh"
+wget -O menu-webmin "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-webmin.sh"
+wget -O speedtest "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/ssh/speedtest_cli.py"
+wget -O about "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/about.sh"
+wget -O auto-reboot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/auto-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/restart.sh"
+wget -O bw "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/bw.sh"
+wget -O menu-theme "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/theme/menu-theme.sh"
+wget -O menu1 "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/theme/menu1.sh"
+wget -O menu2 "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/theme/menu2.sh"
+wget -O menu3 "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/theme/menu3.sh"
+wget -O menu4 "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/theme/menu4.sh"
+wget -O menu5 "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/theme/menu5.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/port/port-ssl.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/port/port-ovpn.sh"
+wget -O acs-set "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/acs-set.sh"
+wget -O status "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/status.sh"
+wget -O sshws "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/sshws.sh"
+wget -O status "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/status.sh"
+wget -O menu-backup "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-backup.sh"
+wget -O backup "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/backup/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/backup/restore.sh"
+wget -O jam "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/jam.sh"
+wget -q -O /usr/bin/xolpanel "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/xolpanel/xolpanel.sh"
+wget -q -O /usr/bin/lock "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/user-lock.sh"
+wget -q -O /usr/bin/unlock "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/user-unlock.sh"
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/update.sh"
+wget -q -O /usr/bin/bot2 "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/bot2.sh"
+wget -q -O /usr/bin/add-bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/add-bot.sh"
+wget -q -O /usr/bin/add-bot-bersama "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/add-bot-bersama.sh"
+wget -q -O /usr/bin/bot-bansos "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/bot-bansos.sh"
+wget -q -O /usr/bin/stop-bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/stop-bot.sh"
+wget -q -O /usr/bin/stop-bot2 "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/stop-bot2.sh"
+wget -q -O /usr/bin/restart-bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/restart-bot.sh"
+wget -q -O /usr/bin/restart-bot2 "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/restart-bot2.sh"
+wget -q -O /usr/bin/hapus-bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/hapus-bot.sh"
+wget -q -O /usr/bin/del-bot2 "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/del-bot2.sh"
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/update.sh"
+wget -q -O /usr/bin/menu-bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-bot.sh"
 chmod +x xolpanel
 chmod +x menu
 chmod +x menu-trial
