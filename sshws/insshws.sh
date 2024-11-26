@@ -11,9 +11,9 @@
 cd
 
 #Install Script Websocket-SSH Python
-#wget -O /usr/local/bin/ws-openssh https://dpvpn.me/sshws/openssh-socket.py
-wget -O /usr/local/bin/ws-dropbear https://dpvpn.me/sshws/dropbear-ws.py
-wget -O /usr/local/bin/ws-stunnel https://dpvpn.me/sshws/ws-stunnel
+#wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/openssh-socket.py
+wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/dropbear-ws.py
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/ws-stunnel
 wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/OPENVPN/ws-ovpn
 
 #izin permision
@@ -24,13 +24,13 @@ chmod +x /usr/local/bin/ws-ovpn
 
 
 #System OpenSSH Websocket-SSH Python
-#wget -O /etc/systemd/system/ws-openssh.service https://dpvpn.me/sshws/service-wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
+#wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/service-wsopenssh && chmod +x /etc/systemd/system/ws-openssh.service
 
 #System Dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/ws-dropbear.service https://dpvpn.me/sshws/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
+wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
 
 #System SSL/TLS Websocket-SSH Python
-wget -O /etc/systemd/system/ws-stunnel.service https://dpvpn.me/sshws/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
+wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
 
 ##System Websocket-OpenVPN Python
 wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/OPENVPN/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
