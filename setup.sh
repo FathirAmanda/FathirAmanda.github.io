@@ -119,7 +119,7 @@ echo -e "$green██║██╔██╗██║╚█████╗░░�
 echo -e "$green██║██║╚████║░╚═══██╗░░░██║░░░██╔══██║██║░░░░░██║░░░░░  ░╚═══██╗░╚═══██╗██╔══██║$NC"
 echo -e "$green██║██║░╚███║██████╔╝░░░██║░░░██║░░██║███████╗███████╗  ██████╔╝██████╔╝██║░░██║$NC"
 echo -e "$green╚═╝╚═╝░░╚══╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚══════╝  ╚═════╝░╚═════╝░╚═╝░░╚═╝$NC"
-echo -e "$green» TERIMAKASIH TELAH MEMAKAI AUTOSCRIPT PREMIUM RISWAN-VPN$NC"
+echo -e "$green» TERIMAKASIH TELAH MEMAKAI AUTOSCRIPT PREMIUM DP-VPN$NC"
 sleep 5
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
@@ -309,7 +309,7 @@ echo "   - Change port" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "------------------------------------------------------------" | tee -a log-install.txt
-echo "===============-[ Script By Riswanvpn ]-==============" | tee -a log-install.txt
+echo "===============-[ Script By dpvpn ]-==============" | tee -a log-install.txt
 echo ""
 echo ""
 rm /root/setup.sh >/dev/null 2>&1
