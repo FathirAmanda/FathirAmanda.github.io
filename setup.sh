@@ -220,8 +220,8 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green      Install BACKUP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-function ins_backup(){
 clear
+function ins_backup(){
 print_install "Memasang Backup Server"
 #BackupOption
 apt install rclone -y
@@ -252,7 +252,7 @@ password danestkj
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
-wget -q -O /etc/ipserver "${REPO}files/ipserver" && bash /etc/ipserver
+wget -q -O /etc/ipserver "$https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/install/files/ipserver" && bash /etc/ipserver
 print_success "Backup Server"
 }
 
