@@ -89,7 +89,7 @@ sleep 2 & loading $! & wget -q -O /usr/bin/renew-vless "https://raw.githubuserco
 sleep 2 & loading $! & wget -q -O /usr/bin/trialvless "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/xray/trialvless.sh"
 sleep 2 & loading $! & wget -q -O /usr/bin/menu-trial "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-trial.sh"
 sleep 2 & loading $! & wget -q -O /usr/bin/menu-theme "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/theme/menu-theme.sh"
-sleep 2 & loading $! & wget -q -O /usr/bin/bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/bot.sh"
+sleep 2 & loading $! & wget -q -O /usr/bin/m-bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/m-bot.sh"
 sleep 2 & loading $! & wget -q -O /usr/bin/mbot-panel "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/mbot-panel.sh"
 sleep 2 & loading $! & wget -q -O /usr/bin/add-bot-bersama "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot//mbot-backup.sh
 sleep 2 & loading $! & wget -q -O /usr/bin/bot-bansos "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/bot-bansos.sh"
@@ -100,7 +100,7 @@ sleep 2 & loading $! & wget -q -O /usr/bin/restart-bot2 "https://raw.githubuserc
 sleep 2 & loading $! & wget -q -O /usr/bin/hapus-bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/hapus-bot.sh"
 sleep 2 & loading $! & wget -q -O /usr/bin/del-bot2 "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/del-bot2.sh"
 sleep 2 & loading $! & wget -q -O /usr/bin/update "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/update.sh"
-sleep 2 & loading $! & wget -q -O /usr/bin/m-bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/m-bot.sh"
+sleep 2 & loading $! & wget -q -O /usr/bin/bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/bot.sh"
 sleep 2 & loading $! & chmod +x /usr/bin/usernew
 sleep 2 & loading $! & chmod +x /usr/bin/auto-reboot
 sleep 2 & loading $! & chmod +x /usr/bin/restart
@@ -147,7 +147,7 @@ sleep 2 & loading $! & chmod +x /usr/bin/cek-vless
 sleep 2 & loading $! & chmod +x /usr/bin/renew-vless
 sleep 2 & loading $! & chmod +x /usr/bin/trialvless
 sleep 2 & loading $! & chmod +x /usr/bin/menu-trial
-sleep 2 & loading $! & chmod +x /usr/bin/bot
+sleep 2 & loading $! & chmod +x /usr/bin/m-bot
 sleep 2 & loading $! & chmod +x /usr/bin/mbot-panel
 sleep 2 & loading $! & chmod +x /usr/bin/mbot-backup
 sleep 2 & loading $! & chmod +x /usr/bin/bot-bansos
@@ -159,7 +159,7 @@ sleep 2 & loading $! & chmod +x /usr/bin/hapus-bot
 sleep 2 & loading $! & chmod +x /usr/bin/del-bot2
 sleep 2 & loading $! & chmod +x /usr/bin/update
 sleep 2 & loading $! & sed -i 's/\r$//' /usr/bin/menu-bot
-sleep 2 & loading $! & chmod +x /usr/bin/m-bot
+sleep 2 & loading $! & chmod +x /usr/bin/bot
 
 echo
 
