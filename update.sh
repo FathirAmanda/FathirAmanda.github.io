@@ -100,7 +100,7 @@ sleep 2 & loading $! & wget -q -O /usr/bin/restart-bot2 "https://raw.githubuserc
 sleep 2 & loading $! & wget -q -O /usr/bin/hapus-bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/hapus-bot.sh"
 sleep 2 & loading $! & wget -q -O /usr/bin/del-bot2 "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/bot/del-bot2.sh"
 sleep 2 & loading $! & wget -q -O /usr/bin/update "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/update.sh"
-sleep 2 & loading $! & wget -q -O /usr/bin/menu-bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/menu-bot.sh"
+sleep 2 & loading $! & wget -q -O /usr/bin/m-bot "https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/menu/m-bot.sh"
 sleep 2 & loading $! & chmod +x /usr/bin/usernew
 sleep 2 & loading $! & chmod +x /usr/bin/auto-reboot
 sleep 2 & loading $! & chmod +x /usr/bin/restart
@@ -159,7 +159,7 @@ sleep 2 & loading $! & chmod +x /usr/bin/hapus-bot
 sleep 2 & loading $! & chmod +x /usr/bin/del-bot2
 sleep 2 & loading $! & chmod +x /usr/bin/update
 sleep 2 & loading $! & sed -i 's/\r$//' /usr/bin/menu-bot
-sleep 2 & loading $! & chmod +x /usr/bin/menu-bot
+sleep 2 & loading $! & chmod +x /usr/bin/m-bot
 
 echo
 
