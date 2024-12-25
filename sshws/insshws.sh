@@ -33,7 +33,7 @@ wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.co
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
 
 ##System Websocket-OpenVPN Python
-wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/WEBSOCKET/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
+wget -O /etc/systemd/system/ws-ovpn.service wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/jbstyle20/tarong/refs/heads/main/tarong/WEBSOCKET/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
 
 #restart service
 #
