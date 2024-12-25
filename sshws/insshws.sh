@@ -14,7 +14,7 @@ cd
 #wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/openssh-socket.py
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/dropbear-ws.py
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/ws-stunnel
-wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/OPENVPN/ws-ovpn
+wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/jbstyle20/tarong/refs/heads/main/tarong/WEBSOCKET/ws-ovpn
 
 #izin permision
 #chmod +x /usr/local/bin/ws-openssh
@@ -33,7 +33,7 @@ wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.co
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/FathirAmanda/FathirAmanda.github.io/refs/heads/main/sshws/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
 
 ##System Websocket-OpenVPN Python
-wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/OPENVPN/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
+wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/WEBSOCKET/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
 
 #restart service
 #
